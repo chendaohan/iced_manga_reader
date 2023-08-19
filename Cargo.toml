@@ -1,0 +1,18 @@
+[package]
+name = "iced_manga_reader"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+iced = { version = "0.10.0", features = ["image", "tokio"] }
+iced_aw = "0.6.0"
+tokio = { version = "1.30.0", features = ["full"] }
+prost = "0.11.9"
+tonic = "0.9.2"
+serde = { version = "1.0.183", features = ["derive"] }
+serde_json = "1.0.104"
+
+[build-dependencies]
+tonic-build = "0.9.2"

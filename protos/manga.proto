@@ -1,0 +1,29 @@
+syntax = "proto3";
+package manga;
+
+service Manga {
+    rpc GetMangaInfo(Empty) returns (MangaInfo);
+    rpc GetMangaImage(ImageNumber) returns (Image);
+}
+
+message Empty {
+}
+
+message MangaInfo {
+    uint32 id = 1;
+    string english_name = 2;
+    string japanese_name = 3;
+    bytes cover = 4;
+    repeated string tags = 5;
+    repeated string artists = 6;
+    uint32 pages = 7;
+    string uploaded = 8;
+}
+
+message ImageNumber {
+    uint32 number = 1;
+}
+
+message Image {
+    bytes image = 1;
+}
